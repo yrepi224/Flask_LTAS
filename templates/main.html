@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>데이터 품질 관리 및 분석</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: left">데이터 품질 관리 및 분석</h1>
+    <table>
+        <tr>
+            <th>Tables</th>
+                <td>
+                    <a href="/data/RawData">RawData</a>
+                    <a href="/data/AllData">AllData</a>
+                    <a href="/data/ShareData">ShareData</a>
+                </td>
+        </tr>
+    </table>
+</div>
+<br>
+<br>
+<div>
+    <table>
+        <tr>
+            <th>TASKS</th>
+                <td>
+                    <a href="/upload_csv">Upload csv</a>
+                    <a href="/upload_AllData">Rawdata to AllData</a>
+                    <a href="/report">Download Report</a>
+                </td>
+        </tr>
+    </table>
+</div>
+{% endblock %}

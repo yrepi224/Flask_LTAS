@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>데이터 품질 관리 및 분석</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">데이터 품질 관리 및 분석</h1>
+    <form action="/test/select/" method="POST">
+        <input type="text" name="like" id="like">
+        <input type="submit" value="계열">
+    </form>
+    <table>
+        <tr>
+            <th>IP</th>
+            <th>HOST</th>
+            <th>App</th>
+            <th>Service</th>
+            <th>계열</th>
+            <th>중복여부</th>
+            {% if task[6] is not None}
+                <th>중복여부</th>
+            <th>Delete</th>
+        </tr>
+        {% for task in rs %}
+            <tr>
+                <td>{{ task[1] }}</td>
+                <td>{{ task[2] }}</td>
+                <td>{{ task[3] }}</td>
+                <td>{{ task[4] }}</td>
+                <td>{{ task[5] }}</td>
+                <td>{{ task[6] }}</td>
+                <td>
+                    <a href="/delete/{{task[0]}}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}        
+    </table>
+
+    <form action="/test/" method="POST">
+        <input type="text" name="content" id="content">
+        <input type="submit" value="Add Task">
+    </form>
+</div>
+{% endblock %}
