@@ -11,7 +11,7 @@ bad_ip = ['192.168.1.1', '172.217.175.101', '172.217.175.101', '172.217.175.10',
 
 # 데이터베이스 insert
 def upload_db(raw_data):
-    conn = psycopg2.connect(database="test",
+    conn = psycopg2.connect(database="ryu",
                             user="sungwon",
                             host="127.0.0.1",
                             password="7887",
@@ -41,7 +41,7 @@ def all_select_data(report):
     highlight.font = Font(bold=True, size=11)
     bd = Side(style='thick', color="000000")
     highlight.border = Border(left=bd, top=bd, right=bd, bottom=bd)
-    connection = psycopg2.connect(database="test",
+    connection = psycopg2.connect(database="ryu",
                                   user="sungwon",
                                   host="127.0.0.1",
                                   password="7887",
@@ -78,7 +78,7 @@ def all_select_data(report):
 
 
 def share_select_data(report):
-    connection = psycopg2.connect(database="test",
+    connection = psycopg2.connect(database="ryu",
                                   user="sungwon",
                                   host="127.0.0.1",
                                   password="7887",
@@ -109,7 +109,7 @@ def share_select_data(report):
 def select_raw_data(filename):
 
     report = filename
-    connection = psycopg2.connect(database="test",
+    connection = psycopg2.connect(database="ryu",
                                   user="sungwon",
                                   host="127.0.0.1",
                                   password="7887",
@@ -142,7 +142,7 @@ def select_raw_data(filename):
 
 
 def upload_sorted_data(raw_data):
-    conn = psycopg2.connect(database="test",
+    conn = psycopg2.connect(database="ryu",
                             user="sungwon",
                             host="127.0.0.1",
                             password="7887",
@@ -218,7 +218,7 @@ def upload_sorted_data(raw_data):
 #     bad_cdn = ['apple', 'google', 'nrt', 'doubleclick', 'onesignal', 'd3fmvko', 'elasticbeanstalk.com',
 #                'android', 'amazonaws.com', 'app-measurement.com', 'cloudfront.net', 'canonical', 'akamai']
 #     report = input('"Delete"_Enter report name: (계열이름 LIKE)')
-#     connection = psycopg2.connect(database="test",
+#     connection = psycopg2.connect(database="ryu",
 #                                   user="sungwon",
 #                                   host="127.0.0.1",
 #                                   password="7887",

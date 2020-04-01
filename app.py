@@ -7,7 +7,7 @@ from upload_csv import upload_csv
 
 app = Flask(__name__)
 
-conn = psycopg2.connect(database="test", user="sungwon", host="127.0.0.1", password="7887",port="5432")
+conn = psycopg2.connect(database="ryu", user="sungwon", host="127.0.0.1", password="7887",port="5432")
 cur = conn.cursor()
 
 
@@ -26,6 +26,8 @@ def raw_select(table):
     else:
         try:
             query = f'''SELECT * FROM public."{table}" ORDER BY "app", "service"'''
+            if table == 'ShareData':
+                query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "ip", "host"'''
             cur.execute(query)
             rs = cur.fetchall()
             rlen = len(rs[0])

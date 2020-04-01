@@ -20,7 +20,7 @@ def upload_csv(filename):
             row_value = []
             for cell in row:
                 row_value.append(cell.value)
-            raw_data[name_app+'__'+row_value[3]+'__'+row_value[1]] = raw_data.get(
+            raw_data[f'{name_app}__{row_value[3]}__{row_value[1]}'] = raw_data.get(
                 row_value[0], [row_value[0], row_value[1], name_app, row_value[3], file_name])
     # DB 업로드
     upload_sorted_data(raw_data)
