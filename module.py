@@ -3,10 +3,9 @@ import psycopg2
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import NamedStyle, Font, Border, Side
 
-
-bad_ip = ['192.168.1.1', '172.217.175.101', '172.217.175.101', '172.217.175.10', '161.69.29.185', '35.224.99.156', '172.217.31.138', '172.217.27.78', '172.217.175.67', '172.217.161.67', '52.199.155.35', '13.125.72.55',
-          '172.217.161.74', '172.217.24.138', '52.69.18.116', '172.217.31.170', '172.217.26.14', '216.58.197.170', '64.233.189.188', '52.69.13.64', '172.217.25.99', '91.189.89.198', '35.222.85.5', '216.58.197.202',
-          '157.240.215.16', '172.217.27.74', '13.35.126.100', '52.26.99.174', '13.225.105.58', '216.58.197.142', '52.36.10.27', '13.227.76.120']
+bad_host = ['facebook', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com',
+            'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 
+            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com']
 
 
 # 데이터베이스 insert
@@ -21,8 +20,8 @@ def upload_db(raw_data):
     fcnt = 0
     for key, value in raw_data.items():
         try:
-            cur.execute(
-                f"""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES({key},{value[0]},{value[1]},{value[2]},{value[3]},{value[4]})""")
+            cur.execute("""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES(%s,%s,%s,%s,%s,%s)""",
+                        (key, value[0], value[1], value[2], value[3], value[4]))
             conn.commit()
             cnt = cnt + 1
             print('successfully imported data!         '+str(cnt)+'  '+key)
@@ -49,7 +48,8 @@ def all_select_data(report):
 
     try:
         with connection.cursor() as cursor:
-            query = f'''SELECT "host", "ip", "app", "service", "duplicate" FROM public."AllData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service", "ip"'''
+            query = '''SELECT "host", "ip", "app", "service", "duplicate" FROM public."AllData" WHERE "filename" LIKE'%''' + \
+                report+'''%'ORDER BY "app", "service", "ip"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -68,7 +68,7 @@ def all_select_data(report):
                     ws['A'+str(ws.max_row)].style = highlight
             wb.remove(wb['Sheet'])
             wb.save(report+' 계열 보고서.xlsx')
-            print(f'Successfully Saved {report}.xlsx')
+            print('Successfully Saved '+report+'.xlsx')
     finally:
         connection.close()
         wb.close()
@@ -84,7 +84,8 @@ def share_select_data(report):
                                   port="5432")
     try:
         with connection.cursor() as cursor:
-            query = f'''SELECT "host", "ip", "app", "service" FROM public."ShareData" WHERE "filename" LIKE'%{report}%'ORDER BY "ip", "service", "app"'''
+            query = '''SELECT "host", "ip", "app", "service" FROM public."ShareData" WHERE "filename" LIKE'%''' + \
+                report+'''%'ORDER BY "ip", "service", "app"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -97,7 +98,7 @@ def share_select_data(report):
             for row in rs:
                 ws.append(row)
             wb.save(report+' 공통.xlsx')
-            print(f'Successfully Saved {report} 공통.xlsx')
+            print('Successfully Saved '+report+' 공통.xlsx')
     finally:
         connection.close()
         wb.close()
@@ -115,7 +116,8 @@ def select_raw_data(filename):
 
     try:
         with connection.cursor() as cursor:
-            query = f'''SELECT "host", "ip", "app", "service" FROM public."RawData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service"'''
+            query = '''SELECT "host", "ip", "app", "service" FROM public."RawData" WHERE "filename" LIKE'%''' + \
+                report+'''%'ORDER BY "app", "service"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -177,16 +179,22 @@ def upload_sorted_data(raw_data):
     cnt = 0
     fcnt = 0
     for key, value in host_data.items():
-        try:
-            cur.execute(f"""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate")           
-            VALUES({key},{value[0]},{value[1]},{value[2]},{value[3]},{value[4]},{value[5]})""")
-            conn.commit()
-            cnt = cnt + 1
-            print('successfully imported data!         '+str(cnt)+'  '+key)
-        except:
-            fcnt = fcnt + 1
-            print('fail count ('+str(fcnt)+')')
-            conn.rollback()
+        no_save = True
+        for host in bad_host:
+            if host in value[0]:
+                no_save = False
+                break
+        if no_save is True:
+            try:
+                cur.execute("""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate")           
+                VALUES(%s,%s,%s,%s,%s,%s,%s)""", (key, value[0], value[1], value[2], value[3], value[4], value[5]))
+                conn.commit()
+                cnt = cnt + 1
+                print('successfully imported data!         '+str(cnt)+'  '+key)
+            except:
+                fcnt = fcnt + 1
+                print('fail count ('+str(fcnt)+')')
+                conn.rollback()
     print('Imported ('+str(cnt)+') lines of All Data!')
     print('Failed ('+str(fcnt)+') lines of All Data!')
     print('------------------------------------------------------------------------------')
@@ -196,16 +204,22 @@ def upload_sorted_data(raw_data):
     fcnt = 0
     for key, value in host_data.items():
         if value[5] == 'TRUE':
-            try:
-                cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename")           
-                VALUES({key},{value[0]},{value[1]},{value[2]},{value[3]},{value[4]})""")
-                conn.commit()
-                cnt = cnt + 1
-                print('successfully imported data!         '+str(cnt)+'  '+key)
-            except:
-                fcnt = fcnt + 1
-                print('fail count ('+str(fcnt)+')')
-                conn.rollback()
+            no_save = True
+            for host in bad_host:
+                if host in value[0]:
+                    no_save = False
+                    break
+            if no_save is True:            
+                try:
+                    cur.execute("""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename")           
+                    VALUES(%s,%s,%s,%s,%s,%s)""", (key, value[0], value[1], value[2], value[3], value[4]))
+                    conn.commit()
+                    cnt = cnt + 1
+                    print('successfully imported data!         '+str(cnt)+'  '+key)
+                except:
+                    fcnt = fcnt + 1
+                    print('fail count ('+str(fcnt)+')')
+                    conn.rollback()
     conn.close()
     print('Imported ('+str(cnt)+') lines of Share Data!')
     print('Failed ('+str(fcnt)+') lines of Share Data!')

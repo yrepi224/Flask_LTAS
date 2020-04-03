@@ -26,8 +26,6 @@ def raw_select(table):
     else:
         try:
             query = f'''SELECT * FROM public."{table}" ORDER BY "app", "service"'''
-            if table == 'ShareData':
-                query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "ip", "host"'''
             cur.execute(query)
             rs = cur.fetchall()
             rlen = len(rs[0])
@@ -55,9 +53,9 @@ def csv_upload():
             foldername = request.form['folder_name']
             filename = request.form['file_name']
             upload_multiple_csv(foldername, filename)
-            return render_template('/')
+            return redirect('/upload_csv')
         except:
-            return 'upload fail'
+            return 'upload failed'
     else:
         return render_template('upload_csv.html')
 
