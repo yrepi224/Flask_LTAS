@@ -2,7 +2,10 @@
 import psycopg2
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import NamedStyle, Font, Border, Side
-
+import glob
+import os
+import sys
+import csv
 bad_host = ['facebook', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com',
             'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 
             'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com']
@@ -153,10 +156,10 @@ def upload_sorted_data(raw_data):
     for key, value in raw_data.items():
         host_data[value[2]+'__'+value[3]+'__'+value[1]] = [value[0],
                                                            value[1], value[2], value[3], value[4], 'FALSE']
-    for key, host_val in host_data.items():
+    for key1, host_val in host_data.items():
         for key, raw_val in raw_data.items():
-            if host_val[1] == raw_val[1] and host_val[0] == host_val[1] and host_val[3]+host_val[4] != raw_val[3]+raw_val[4] and raw_val[0] != raw_val[1]:
-                host_data[key] = [raw_val[0], host_val[1],
+            if host_val[1] == raw_val[1] and host_val[0] == host_val[1] and raw_val[0] != raw_val[1]:
+                host_data[key1] = [raw_val[0], host_val[1],
                                   host_val[2], host_val[3], host_val[4], 'FALSE']
                 break
 
@@ -225,31 +228,45 @@ def upload_sorted_data(raw_data):
     print('Failed ('+str(fcnt)+') lines of Share Data!')
 
 
-# def delete_cdn():
-#     bad_cdn = ['apple', 'google', 'nrt', 'doubleclick', 'onesignal', 'd3fmvko', 'elasticbeanstalk.com',
-#                'android', 'amazonaws.com', 'app-measurement.com', 'cloudfront.net', 'canonical', 'akamai']
-#     report = input('"Delete"_Enter report name: (계열이름 LIKE)')
-#     connection = psycopg2.connect(database="ryu",
-#                                   user="sungwon",
-#                                   host="127.0.0.1",
-#                                   password="7887",
-#                                   port="5432")
-#     #del_query = '''SELECT FROM public."AllData" WHERE filename = '''+"'"+report+'''' AND host like '%'''+cdn+"%'"
-#     try:
-#         with connection.cursor() as cursor:
-#             bad_pkey = list()
-#             for cdn in bad_cdn:
-#                 query = '''select "Pkey" FROM public."RawData" WHERE filename = '''+"'"+report+'''' AND host like '%'''+cdn+"%'"
-#                 show_me_the_ip = cursor.execute(query)
-#             for pkey in bad_pkey:
-#                 cursor.execute('''DELETE FROM public."RawData" WHERE "Pkey" = %s''', (str(pkey),))
-#     finally:
-#         connection.close()
-# delete_cdn()
-    # try:
-    #     with connection.cursor() as cursor:
-    #         query = '''SELECT "host", "ip", "app", "service" FROM public."RawData" WHERE "filename" LIKE'%''' + \
-    #             report+'''%'ORDER BY "app", "service"'''
+def emergency_upload():
+    raw_data = dict()
+    print('Try it Multiple Times')
+    name_app = input('폴더 입력: ')
+    file_name = input('계열 입력:')
+    input_path = f'/Users/sungwon/Desktop/sryu/Flask_LTAS/csv/{name_app}'
+    for input_file in glob.glob(os.path.join(input_path, '*.csv')):
+        with open(input_file, 'r', newline='') as csv_in_file:
+            filereader = csv.reader(csv_in_file)
+            header = next(filereader)
+            # 전체 데이터 딕셔너리 host_data[0] = Domain, [1] = IP, [2] = App, [3] = Service, [4] = Filename, [5] = 공통여부
+            cnt = 0
+            for row_value in filereader:
+                raw_data[row_value[2]+'__'+row_value[3]+'__'+row_value[1]] = raw_data.get(
+                    row_value[0], [row_value[0], row_value[1], row_value[2], row_value[3], file_name])
+
+    conn = psycopg2.connect(database="ryu",
+                        user="sungwon",
+                        host="127.0.0.1",
+                        password="7887",
+                        port="5432")
+    cur = conn.cursor()
+    cnt = 0
+    fcnt = 0
+    for key, value in raw_data.items():
+        try:
+            cur.execute("""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES(%s,%s,%s,%s,%s,%s)""",
+                        (key, value[0], value[1], value[2], value[3], value[4]))
+            conn.commit()
+            cnt = cnt + 1
+            print('successfully imported data!         '+str(cnt)+'  '+key)
+        except:
+            fcnt = fcnt + 1
+            print('fail count ('+str(fcnt)+')')
+            conn.rollback()
+    print('Imported ('+str(cnt)+') lines of All Data!')
+    print('Failed ('+str(fcnt)+') lines of All Data!')
+    print('------------------------------------------------------------------------------')
+# emergency_upload()
 # **개별실행**
 # upload_db()
 # all_select_data()
