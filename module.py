@@ -23,8 +23,7 @@ def upload_db(raw_data):
     fcnt = 0
     for key, value in raw_data.items():
         try:
-            cur.execute("""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES(%s,%s,%s,%s,%s,%s)""",
-                        (key, value[0], value[1], value[2], value[3], value[4]))
+            cur.execute(f"""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""") 
             conn.commit()
             cnt = cnt + 1
             print('successfully imported data!         '+str(cnt)+'  '+key)
@@ -51,8 +50,7 @@ def all_select_data(report):
 
     try:
         with connection.cursor() as cursor:
-            query = '''SELECT "host", "ip", "app", "service", "duplicate" FROM public."AllData" WHERE "filename" LIKE'%''' + \
-                report+'''%'ORDER BY "app", "service", "ip"'''
+            query = f'''SELECT "host", "ip", "app", "service", "duplicate" FROM public."AllData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service", "ip"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -71,7 +69,7 @@ def all_select_data(report):
                     ws['A'+str(ws.max_row)].style = highlight
             wb.remove(wb['Sheet'])
             wb.save(report+' 계열 보고서.xlsx')
-            print('Successfully Saved '+report+'.xlsx')
+            print(f'Successfully Saved {report}.xlsx')
     finally:
         connection.close()
         wb.close()
@@ -87,8 +85,7 @@ def share_select_data(report):
                                   port="5432")
     try:
         with connection.cursor() as cursor:
-            query = '''SELECT "host", "ip", "app", "service" FROM public."ShareData" WHERE "filename" LIKE'%''' + \
-                report+'''%'ORDER BY "ip", "service", "app"'''
+            query = f'''SELECT "host", "ip", "app", "service" FROM public."ShareData" WHERE "filename" LIKE'%{report}%'ORDER BY "ip", "service", "app"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -101,7 +98,7 @@ def share_select_data(report):
             for row in rs:
                 ws.append(row)
             wb.save(report+' 공통.xlsx')
-            print('Successfully Saved '+report+' 공통.xlsx')
+            print(f'Successfully Saved {report} 공통.xlsx')
     finally:
         connection.close()
         wb.close()
@@ -119,8 +116,7 @@ def select_raw_data(filename):
 
     try:
         with connection.cursor() as cursor:
-            query = '''SELECT "host", "ip", "app", "service" FROM public."RawData" WHERE "filename" LIKE'%''' + \
-                report+'''%'ORDER BY "app", "service"'''
+            query = f'''SELECT "host", "ip", "app", "service" FROM public."RawData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -189,8 +185,8 @@ def upload_sorted_data(raw_data):
                 break
         if no_save is True:
             try:
-                cur.execute("""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate")           
-                VALUES(%s,%s,%s,%s,%s,%s,%s)""", (key, value[0], value[1], value[2], value[3], value[4], value[5]))
+                cur.execute(f"""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate")           
+                VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{value[5]}')""")
                 conn.commit()
                 cnt = cnt + 1
                 print('successfully imported data!         '+str(cnt)+'  '+key)
@@ -214,8 +210,8 @@ def upload_sorted_data(raw_data):
                     break
             if no_save is True:            
                 try:
-                    cur.execute("""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename")           
-                    VALUES(%s,%s,%s,%s,%s,%s)""", (key, value[0], value[1], value[2], value[3], value[4]))
+                    cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename")           
+                    VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""")
                     conn.commit()
                     cnt = cnt + 1
                     print('successfully imported data!         '+str(cnt)+'  '+key)

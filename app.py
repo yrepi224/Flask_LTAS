@@ -98,4 +98,4 @@ def Report_excel(csv):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
