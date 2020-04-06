@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import psycopg2
 from upload_multiple_csv import upload_multiple_csv
-from module import all_select_data, share_select_data
+from module import all_select_data, share_select_data, emergency_upload
 from upload_csv import upload_csv
 
 
@@ -13,11 +13,17 @@ cur = conn.cursor()
 
 @app.route('/')
 def main_page():
+    """
+    메인페이지
+    """
     return render_template('main.html')
 
 
 @app.route('/data/<table>', methods=['POST', 'GET'])
 def raw_select(table):
+    """
+    RawData 출력
+    """
     if request.method == 'POST':
         try:
             pass
@@ -36,6 +42,9 @@ def raw_select(table):
 
 @app.route('/delete/<table>/<Pkey>')
 def delete(table, Pkey):
+    """
+    선택된 row 삭제
+    """
     try:
         query = f"""DELETE FROM public."{table}" WHERE "Pkey" = '{Pkey}'"""
         cur.execute(query)
@@ -48,6 +57,9 @@ def delete(table, Pkey):
 
 @app.route('/upload_csv', methods =['POST', 'GET'])
 def csv_upload():
+    """
+    csv파일을 RawData로 push한다.
+    """
     if request.method == 'POST':
         try:
             foldername = request.form['folder_name']
@@ -62,6 +74,9 @@ def csv_upload():
 
 @app.route('/upload_AllData', methods=['POST', 'GET'])
 def AllData_upload():
+    """
+    RawData에서 AllData로 데이터 가공을 하고 push한다.
+    """
     if request.method == 'POST':
         try:
             upload_csv(request.form['filename'])
@@ -78,11 +93,17 @@ def AllData_upload():
 
 @app.route('/report/')
 def report_page():
+    """
+    보고서 페이지로 리다이렉트
+    """
     return render_template('report.html')
 
 
 @app.route('/report/<csv>', methods=['POST', 'GET'])
 def Report_excel(csv):
+    """
+    엑셀파일로 보고서를 출력한다.
+    """
     if csv == 'all_data':
         try:
             all_select_data(request.form['all_data'])
@@ -97,5 +118,21 @@ def Report_excel(csv):
             return '실패'
 
 
+@app.route('/upload/emergency/')
+def emergency():
+    """
+    보고서 파일을 데이터베이스에 한번에 입력한다. 
+    """
+    if request.method == 'POST':
+        try:
+            foldername = request.form['folder_name']
+            filename = request.form['file_name']
+            emergency_upload(foldername, filename)
+            return redirect('/uplaod/emergency')
+        except:
+            return 'upload failed'
+    else:
+        return render_template('upload_csv.html')
+
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

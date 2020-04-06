@@ -224,11 +224,10 @@ def upload_sorted_data(raw_data):
     print('Failed ('+str(fcnt)+') lines of Share Data!')
 
 
-def emergency_upload():
+def emergency_upload(foldername, filename):
     raw_data = dict()
     print('Try it Multiple Times')
-    name_app = input('폴더 입력: ')
-    file_name = input('계열 입력:')
+    name_app = foldername
     input_path = f'/Users/sungwon/Desktop/sryu/Flask_LTAS/csv/{name_app}'
     for input_file in glob.glob(os.path.join(input_path, '*.csv')):
         with open(input_file, 'r', newline='') as csv_in_file:
