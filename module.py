@@ -261,8 +261,9 @@ def emergency_upload(foldername, filename):
     print('Imported ('+str(cnt)+') lines of All Data!')
     print('Failed ('+str(fcnt)+') lines of All Data!')
     print('------------------------------------------------------------------------------')
-# emergency_upload()
+
 # **개별실행**
+# emergency_upload()
 # upload_db()
 # all_select_data()
 # share_select_data()

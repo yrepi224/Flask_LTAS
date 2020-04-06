@@ -132,7 +132,7 @@ def emergency():
         except:
             return 'upload failed'
     else:
-        return render_template('upload_csv.html')
+        return render_template('upload_csv.html',emergency = 'emergency')
 
 if __name__ == "__main__":
     app.run(debug=True)
