@@ -6,9 +6,9 @@ import glob
 import os
 import sys
 import csv
-bad_host = ['facebook', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com',
+bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com',
             'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 
-            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com']
+            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com', 'gstatic', 'mcafee', 'googleapis']
 
 
 # 데이터베이스 insert
@@ -232,12 +232,11 @@ def emergency_upload(foldername, filename):
     for input_file in glob.glob(os.path.join(input_path, '*.csv')):
         with open(input_file, 'r', newline='') as csv_in_file:
             filereader = csv.reader(csv_in_file)
-            header = next(filereader)
             # 전체 데이터 딕셔너리 host_data[0] = Domain, [1] = IP, [2] = App, [3] = Service, [4] = Filename, [5] = 공통여부
             cnt = 0
             for row_value in filereader:
                 raw_data[row_value[2]+'__'+row_value[3]+'__'+row_value[1]] = raw_data.get(
-                    row_value[0], [row_value[0], row_value[1], row_value[2], row_value[3], file_name])
+                    row_value[0], [row_value[0], row_value[1], row_value[2], row_value[3], filename])
 
     conn = psycopg2.connect(database="ryu",
                         user="sungwon",

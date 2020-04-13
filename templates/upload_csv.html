@@ -9,7 +9,7 @@
     <h1 style="text-align: left">데이터 품질 관리 및 분석    {% if emergency == 'emergency' %}
         <br>
         <br>
-        emergency Upload
+        **emergency Upload**
         <br>
         <br>
         {% endif %}</h1>
@@ -39,7 +39,12 @@
     </table>
 </div>
 <div>
+    {% if emergency == 'emergency' %}
+    <form action="/upload/emergency" method="POST">
+    {% endif %}
+    {% if emergency != 'emergency' %}
     <form action="/upload_csv" method="POST">
+    {% endif %}
         <br>
         <br>
         <a>폴더 이름</a>

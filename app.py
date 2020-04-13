@@ -118,7 +118,7 @@ def Report_excel(csv):
             return '실패'
 
 
-@app.route('/upload/emergency/')
+@app.route('/upload/emergency/', methods=['POST','GET'])
 def emergency():
     """
     보고서 파일을 데이터베이스에 한번에 입력한다. 
@@ -128,7 +128,7 @@ def emergency():
             foldername = request.form['folder_name']
             filename = request.form['file_name']
             emergency_upload(foldername, filename)
-            return redirect('/uplaod/emergency')
+            return redirect('/upload/emergency')
         except:
             return 'upload failed'
     else:
