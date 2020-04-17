@@ -6,8 +6,8 @@ import glob
 import os
 import sys
 import csv
-bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com',
-            'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 
+bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com', '1e100.net', 'service.game-mode.net', 'localhost', 'DESKTOP-18JBMRB',
+            'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 'd1iskralo6mo11.cloudfront.net', 'beacons.gvt2.com', 'samsungiotcloud',
             'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com', 'gstatic', 'mcafee', 'googleapis']
 
 
@@ -23,7 +23,8 @@ def upload_db(raw_data):
     fcnt = 0
     for key, value in raw_data.items():
         try:
-            cur.execute(f"""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""") 
+            cur.execute(
+                f"""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""")
             conn.commit()
             cnt = cnt + 1
             print('successfully imported data!         '+str(cnt)+'  '+key)
@@ -156,7 +157,7 @@ def upload_sorted_data(raw_data):
         for key, raw_val in raw_data.items():
             if host_val[1] == raw_val[1] and host_val[0] == host_val[1] and raw_val[0] != raw_val[1]:
                 host_data[key1] = [raw_val[0], host_val[1],
-                                  host_val[2], host_val[3], host_val[4], 'FALSE']
+                                   host_val[2], host_val[3], host_val[4], 'FALSE']
                 break
 
     # 공통 호스트 변경 작업 1
@@ -208,7 +209,7 @@ def upload_sorted_data(raw_data):
                 if host in value[0]:
                     no_save = False
                     break
-            if no_save is True:            
+            if no_save is True:
                 try:
                     cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename")           
                     VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""")
@@ -239,10 +240,10 @@ def emergency_upload(foldername, filename):
                     row_value[0], [row_value[0], row_value[1], row_value[2], row_value[3], filename])
 
     conn = psycopg2.connect(database="ryu",
-                        user="sungwon",
-                        host="127.0.0.1",
-                        password="7887",
-                        port="5432")
+                            user="sungwon",
+                            host="127.0.0.1",
+                            password="7887",
+                            port="5432")
     cur = conn.cursor()
     cnt = 0
     fcnt = 0

@@ -31,7 +31,9 @@ def raw_select(table):
             return 'Something wrong'
     else:
         try:
-            query = f'''SELECT * FROM public."{table}" ORDER BY "app", "service"'''
+            query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "app", "service"'''
+            if table == 'ShareData':
+                query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "ip", "app", "service"'''
             cur.execute(query)
             rs = cur.fetchall()
             rlen = len(rs[0])
