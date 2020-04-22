@@ -19,7 +19,6 @@ def upload_multiple_csv(folder_name, file_name):
             filereader = csv.reader(csv_in_file)
             header = next(filereader)
             # 전체 데이터 딕셔너리 host_data[0] = Domain, [1] = IP, [2] = App, [3] = Service, [4] = Filename, [5] = 공통여부
-            cnt = 0
             for row_value in filereader:
                 raw_data[name_app+'__'+name_service+'__'+row_value[1]] = raw_data.get(
                     row_value[1], [row_value[1], row_value[2], name_app, name_service, file_name])    

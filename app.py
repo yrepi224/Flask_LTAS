@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import psycopg2
 from upload_multiple_csv import upload_multiple_csv
-from module import all_select_data, share_select_data, emergency_upload
+from module import all_select_data, share_select_data, emergency_upload, bad_host
 from upload_csv import upload_csv
 
 
@@ -19,27 +19,21 @@ def main_page():
     return render_template('main.html')
 
 
-@app.route('/data/<table>', methods=['POST', 'GET'])
+@app.route('/data/<table>')
 def raw_select(table):
     """
     RawData 출력
     """
-    if request.method == 'POST':
-        try:
-            pass
-        except:
-            return 'Something wrong'
-    else:
-        try:
-            query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "app", "service"'''
-            if table == 'ShareData':
-                query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "ip", "app", "service"'''
-            cur.execute(query)
-            rs = cur.fetchall()
-            rlen = len(rs[0])
-            return render_template('raw.html', rs=rs, rlen=rlen, table=table)
-        except:
-            return f'There is no table named {table}'
+    try:
+        query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "app", "service"'''
+        if table == 'ShareData':
+            query = f'''SELECT * FROM public."{table}" ORDER BY "filename", "ip", "app", "service"'''
+        cur.execute(query)
+        rs = cur.fetchall()
+        rlen = len(rs[0])
+        return render_template('raw.html', rs=rs, rlen=rlen, table=table)
+    except:
+        return f'There is no table named {table}'
 
 
 @app.route('/delete/<table>/<Pkey>')
@@ -54,7 +48,7 @@ def delete(table, Pkey):
         print(f'Deleted {query}')
         return redirect(f"/data/{table}")
     except:
-        return 'There was an issue deleteing your task'
+        return 'There was an issue deleting your task'
 
 
 @app.route('/upload_csv', methods =['POST', 'GET'])
@@ -136,5 +130,21 @@ def emergency():
     else:
         return render_template('upload_csv.html',emergency = 'emergency')
 
+
+@app.route('/badhosts', methods= ['POST', 'GET'])
+def badhosts():
+    """
+    임시 Bad Host 보여준다.
+    """
+    if request.method =='POST':
+        try:
+            bad_host.extend([request.form['host']])
+            return render_template('badhosts.html', bad_host = bad_host, enumerate = enumerate, update = request.form['host'])
+        except:
+            pass
+    else:
+        return render_template('badhosts.html', bad_host = bad_host, enumerate = enumerate)
+
+
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)

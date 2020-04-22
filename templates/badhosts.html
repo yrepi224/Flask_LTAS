@@ -7,7 +7,7 @@
 
 {% block body %}
 <div class="content">
-    <h1 style="text-align: left">데이터 품질 관리 및 분석</h1>
+    <h1 style="text-align: left">Bad Hosts</h1>
     <table>
         <tr>
             <th>Tables</th>
@@ -33,37 +33,26 @@
         </table>
         <br>
     </div>
-    {% if table == 'RawData' %}
-    <br>
-    <a>RawData to AllData</a>
-    <br>
-    <form action="/upload_AllData" method="POST">
+    <form action="/badhosts" method="POST">
         <br>
-        <a>계열 이름</a>
-        <input type="text" name="filename" id="filename">
-        <input type="submit" value="Upload to AllData">
+        <a>Upload Bad Host</a>
+        <br>
+        <input type="text" name="host" id="host">
+        <input type="submit" value="Insert">
     </form>
-    <br>
-    {% endif %}
     <table>
         <tr>
+            <th>No.</th>
             <th>Host</th>
-            <th>IP</th>
-            <th>App</th>
-            <th>Service</th>
-            <th>계열</th>
-        {% if rlen== 7 %}
-            <th>중복여부</th>
-        {% endif %}
-            <th>Delete</th>
         </tr>
-        {% for task in rs %}
+
+        {% for count, task in enumerate(bad_host) %}
             <tr>
-            {% for num in range(1, rlen) %}
-                <td>{{ task[num] }}</td>
-            {% endfor %}   
                 <td>
-                    <a href="/delete/{{table}}/{{task[0]}}">Delete</a>
+                    {{count+1}}
+                </td>
+                <td>
+                    {{task}}
                 </td>
             </tr>
         {% endfor %}        
