@@ -8,7 +8,7 @@ import sys
 import csv
 bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com', '1e100.net', 'service.game-mode.net', 'localhost', 'DESKTOP-18JBMRB',
             'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 'd1iskralo6mo11.cloudfront.net', 'beacons.gvt2.com', 'samsungiotcloud',
-            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com', 'gstatic', 'mcafee', 'googleapis']
+            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com', 'gstatic', 'mcafee', 'googleapis','MyoungehsiPhone']
 
 
 # 데이터베이스 insert
