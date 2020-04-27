@@ -12,7 +12,7 @@ def upload_multiple_csv(folder_name, file_name):
     print('Try it Multiple Times')
     name_app = folder_name
     file_name = file_name
-    input_path = f'/Users/sungwon/Desktop/sryu/Flask_LTAS/csv/{name_app}'
+    input_path = f'/Users/sungwonryu/Documents/GitHub/Flask_LTAS/csv/{name_app}'
     for input_file in glob.glob(os.path.join(input_path, '*.csv')):
         name_service = Path(input_file).stem
         with open(input_file, 'r', newline='') as csv_in_file:

@@ -7,7 +7,7 @@ from upload_csv import upload_csv
 
 app = Flask(__name__)
 
-conn = psycopg2.connect(database="ryu", user="sungwon", host="127.0.0.1", password="7887",port="5432")
+conn = psycopg2.connect(database="ryu", user="sungwonryu", host="127.0.0.1", password="7887", port="5432")
 cur = conn.cursor()
 
 
@@ -139,12 +139,12 @@ def badhosts():
     if request.method =='POST':
         try:
             bad_host.extend([request.form['host']])
-            return render_template('badhosts.html', bad_host = bad_host, enumerate = enumerate, update = request.form['host'])
+            return render_template('badhosts.html', bad_host=bad_host, enumerate=enumerate, update=request.form['host'])
         except:
             pass
     else:
-        return render_template('badhosts.html', bad_host = bad_host, enumerate = enumerate)
+        return render_template('badhosts.html', bad_host=bad_host, enumerate=enumerate)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

@@ -8,13 +8,13 @@ import sys
 import csv
 bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com', '1e100.net', 'service.game-mode.net', 'localhost', 'DESKTOP-18JBMRB',
             'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 'd1iskralo6mo11.cloudfront.net', 'beacons.gvt2.com', 'samsungiotcloud',
-            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'elasticbeastalk.com', 'gstatic', 'mcafee', 'googleapis','MyoungehsiPhone']
+            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', '', 'gstatic', 'mcafee', 'googleapis','MyoungehsiPhone']
 
 
 # 데이터베이스 insert
 def upload_db(raw_data):
     conn = psycopg2.connect(database="ryu",
-                            user="sungwon",
+                            user="sungwonryu",
                             host="127.0.0.1",
                             password="7887",
                             port="5432")
@@ -44,7 +44,7 @@ def all_select_data(report):
     bd = Side(style='thick', color="000000")
     highlight.border = Border(left=bd, top=bd, right=bd, bottom=bd)
     connection = psycopg2.connect(database="ryu",
-                                  user="sungwon",
+                                  user="sungwonryu",
                                   host="127.0.0.1",
                                   password="7887",
                                   port="5432")
@@ -80,7 +80,7 @@ def all_select_data(report):
 
 def share_select_data(report):
     connection = psycopg2.connect(database="ryu",
-                                  user="sungwon",
+                                  user="sungwonryu",
                                   host="127.0.0.1",
                                   password="7887",
                                   port="5432")
@@ -110,7 +110,7 @@ def select_raw_data(filename):
 
     report = filename
     connection = psycopg2.connect(database="ryu",
-                                  user="sungwon",
+                                  user="sungwonryu",
                                   host="127.0.0.1",
                                   password="7887",
                                   port="5432")
@@ -142,7 +142,7 @@ def select_raw_data(filename):
 
 def upload_sorted_data(raw_data):
     conn = psycopg2.connect(database="ryu",
-                            user="sungwon",
+                            user="sungwonryu",
                             host="127.0.0.1",
                             password="7887",
                             port="5432")
@@ -229,7 +229,7 @@ def emergency_upload(foldername, filename):
     raw_data = dict()
     print('Try it Multiple Times')
     name_app = foldername
-    input_path = f'/Users/sungwon/Desktop/sryu/Flask_LTAS/csv/{name_app}'
+    input_path = f'/Users/sungwonryu/Documents/GitHub/Flask_LTAS/csv/{name_app}'
     for input_file in glob.glob(os.path.join(input_path, '*.csv')):
         with open(input_file, 'r', newline='') as csv_in_file:
             filereader = csv.reader(csv_in_file)
@@ -240,7 +240,7 @@ def emergency_upload(foldername, filename):
                     row_value[0], [row_value[0], row_value[1], row_value[2], row_value[3], filename])
 
     conn = psycopg2.connect(database="ryu",
-                            user="sungwon",
+                            user="sungwonryu",
                             host="127.0.0.1",
                             password="7887",
                             port="5432")
