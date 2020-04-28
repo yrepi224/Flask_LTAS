@@ -191,13 +191,13 @@ def upload_sorted_data(raw_data):
                 VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{value[5]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
                 conn.commit()
                 cnt = cnt + 1
-                print('successfully imported data!         '+str(cnt)+'  '+key)
+                print(f'successfully imported data!         {str(cnt)}  {key}')
             except:
                 fcnt = fcnt + 1
                 print('fail count ('+str(fcnt)+')')
                 conn.rollback()
-    print('Imported ('+str(cnt)+') lines of All Data!')
-    print('Failed ('+str(fcnt)+') lines of All Data!')
+    print(f'Imported {str(cnt)} lines of All Data!')
+    print(f'Failed {str(fcnt)} lines of All Data!')
     print('------------------------------------------------------------------------------')
 
     # 데이터베이스 insert - 공통데이터
@@ -216,14 +216,14 @@ def upload_sorted_data(raw_data):
                     VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
                     conn.commit()
                     cnt = cnt + 1
-                    print('successfully imported data!         '+str(cnt)+'  '+key)
+                    print(f'successfully imported data!         {str(cnt)}  {key}')
                 except:
                     fcnt = fcnt + 1
-                    print('fail count ('+str(fcnt)+')')
+                    print(f'fail count {str(fcnt)}')
                     conn.rollback()
     conn.close()
-    print('Imported ('+str(cnt)+') lines of Share Data!')
-    print('Failed ('+str(fcnt)+') lines of Share Data!')
+    print(f'Imported {str(cnt)} lines of Share Data!')
+    print(f'Failed {str(fcnt)} lines of Share Data!')
 
 
 def emergency_upload(foldername, filename):

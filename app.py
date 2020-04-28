@@ -130,15 +130,15 @@ def emergency():
         except:
             return 'upload failed'
     else:
-        return render_template('upload_csv.html',emergency = 'emergency')
+        return render_template('upload_csv.html', emergency='emergency')
 
 
-@app.route('/badhosts', methods= ['POST', 'GET'])
+@app.route('/badhosts', methods=['POST', 'GET'])
 def badhosts() -> None:
     """
     임시 Bad Host 보여준다.
     """
-    if request.method =='POST':
+    if request.method == 'POST':
         try:
             bad_host.extend([request.form['host']])
             return render_template('badhosts.html', bad_host=bad_host, enumerate=enumerate, update=request.form['host'])
