@@ -2,6 +2,7 @@
 import psycopg2
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import NamedStyle, Font, Border, Side
+from datetime import datetime
 import glob
 import os
 import sys
@@ -24,7 +25,7 @@ def upload_db(raw_data):
     for key, value in raw_data.items():
         try:
             cur.execute(
-                f"""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""")
+                f"""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename", "date")VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
             conn.commit()
             cnt = cnt + 1
             print('successfully imported data!         '+str(cnt)+'  '+key)
@@ -51,7 +52,7 @@ def all_select_data(report):
 
     try:
         with connection.cursor() as cursor:
-            query = f'''SELECT "host", "ip", "app", "service", "duplicate" FROM public."AllData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service", "ip"'''
+            query = f'''SELECT "host", "ip", "app", "service", "duplicate", "date" FROM public."AllData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service", "ip"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -64,7 +65,7 @@ def all_select_data(report):
                     ws = wb.get_sheet_by_name(row[2])
                     name = row[2]
                     num = num + 1
-                    ws.append(['Domain', 'IP', 'App', 'Service', '공통여부'])
+                    ws.append(['Domain', 'IP', 'App', 'Service', '공통여부', 'Date'])
                 ws.append(row)
                 if row[4] is True:
                     ws['A'+str(ws.max_row)].style = highlight
@@ -86,14 +87,14 @@ def share_select_data(report):
                                   port="5432")
     try:
         with connection.cursor() as cursor:
-            query = f'''SELECT "host", "ip", "app", "service" FROM public."ShareData" WHERE "filename" LIKE'%{report}%'ORDER BY "ip", "service", "app"'''
+            query = f'''SELECT "host", "ip", "app", "service", "date" FROM public."ShareData" WHERE "filename" LIKE'%{report}%'ORDER BY "ip", "service", "app"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
             ws = wb.active
             wb['Sheet'].title = '공통'
             # 첫행 입력
-            ws.append(('Domain', 'IP', 'App', 'Service'))
+            ws.append(('Domain', 'IP', 'App', 'Service', 'Date'))
 
             # DB 모든 데이터 엑셀로
             for row in rs:
@@ -117,7 +118,7 @@ def select_raw_data(filename):
 
     try:
         with connection.cursor() as cursor:
-            query = f'''SELECT "host", "ip", "app", "service" FROM public."RawData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service"'''
+            query = f'''SELECT "host", "ip", "app", "service", "date" FROM public."RawData" WHERE "filename" LIKE'%{report}%'ORDER BY "app", "service"'''
             cursor.execute(query)
             rs = cursor.fetchall()
             wb = Workbook()
@@ -186,8 +187,8 @@ def upload_sorted_data(raw_data):
                 break
         if no_save is True:
             try:
-                cur.execute(f"""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate")           
-                VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{value[5]}')""")
+                cur.execute(f"""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate", "date")           
+                VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{value[5]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
                 conn.commit()
                 cnt = cnt + 1
                 print('successfully imported data!         '+str(cnt)+'  '+key)
@@ -211,8 +212,8 @@ def upload_sorted_data(raw_data):
                     break
             if no_save is True:
                 try:
-                    cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename")           
-                    VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')""")
+                    cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename", "date")           
+                    VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
                     conn.commit()
                     cnt = cnt + 1
                     print('successfully imported data!         '+str(cnt)+'  '+key)
