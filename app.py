@@ -132,7 +132,7 @@ def emergency():
 
 
 @app.route('/badhosts', methods= ['POST', 'GET'])
-def badhosts():
+def badhosts() -> None:
     """
     임시 Bad Host 보여준다.
     """

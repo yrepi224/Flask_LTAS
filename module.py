@@ -8,7 +8,7 @@ import sys
 import csv
 bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com', '1e100.net', 'service.game-mode.net', 'localhost', 'DESKTOP-18JBMRB',
             'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 'd1iskralo6mo11.cloudfront.net', 'beacons.gvt2.com', 'samsungiotcloud',
-            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', '', 'gstatic', 'mcafee', 'googleapis','MyoungehsiPhone']
+            'measurement', 'android', '.local', 'akamai', 'gvt1.com', 'apple', 'onesignal', 'gstatic', 'mcafee', 'googleapis', 'MyoungehsiPhone', 'Domain']
 
 
 # 데이터베이스 insert
@@ -249,8 +249,7 @@ def emergency_upload(foldername, filename):
     fcnt = 0
     for key, value in raw_data.items():
         try:
-            cur.execute("""INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES(%s,%s,%s,%s,%s,%s)""",
-                        (key, value[0], value[1], value[2], value[3], value[4]))
+            cur.execute(f'''INSERT INTO public."RawData"("Pkey", "host", "ip", "app", "service", "filename")VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}')''')
             conn.commit()
             cnt = cnt + 1
             print('successfully imported data!         '+str(cnt)+'  '+key)
