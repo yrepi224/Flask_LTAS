@@ -1,228 +1,336 @@
-﻿Domain,IP,App,Service
-14.63.143.193,14.63.143.193,KT Super VR,VR 리스트
-freesam.kt.com,14.32.69.19,KT Super VR,앱시작
-14.63.143.193,14.63.143.193,KT Super VR,앱시작
-imas.omega-bo.co.kr,175.207.88.64,KT Super VR,앱시작
-imws.omega-bo.co.kr,175.207.88.65,KT Super VR,앱시작
-175.207.124.74,175.207.124.74,e스포츠라이브,LIVE방송
-175.207.124.79,175.207.124.79,e스포츠라이브,LIVE방송
-fgelw.esports.kt.com,211.252.120.38,e스포츠라이브,LIVE방송
-freesam.kt.com,14.32.69.19,e스포츠라이브,VOD
-175.207.124.71,175.207.124.71,e스포츠라이브,VOD
-175.207.124.74,175.207.124.74,e스포츠라이브,VOD
-175.207.124.75,175.207.124.75,e스포츠라이브,VOD
-175.207.124.78,175.207.124.78,e스포츠라이브,VOD
-175.207.124.79,175.207.124.79,e스포츠라이브,VOD
-service.game-mode.net,18.179.87.8,e스포츠라이브,VOD
-service.game-mode.net,18.182.156.239,e스포츠라이브,VOD
-fgelw.esports.kt.com,211.252.120.38,e스포츠라이브,VOD
-service.game-mode.net,52.193.83.111,e스포츠라이브,VOD
-service.game-mode.net,52.197.13.201,e스포츠라이브,VOD
-service.game-mode.net,52.69.185.5,e스포츠라이브,VOD
-59.18.30.144,59.18.30.144,e스포츠라이브,VOD
-freesam.kt.com,14.32.69.19,e스포츠라이브,앱시작
-175.207.124.71,175.207.124.71,e스포츠라이브,앱시작
-fgelw.esports.kt.com,211.252.120.38,e스포츠라이브,앱시작
-14.32.70.2,14.32.70.2,나를,통화
-narle.io,14.63.159.112,나를,통화
-14.63.159.113,14.63.159.113,나를,통화
-chat.narle.io,14.63.159.116,나를,통화
-14.63.159.129,14.63.159.129,나를,통화
-175.196.95.125,175.196.95.125,나를,통화
-narle.io,14.63.159.112,나를,앱시작
-14.63.159.129,14.63.159.129,나를,앱시작
-14.32.70.2,14.32.70.2,나를,오픈플래닛
-narle.io,14.63.159.112,나를,오픈플래닛
-14.63.159.113,14.63.159.113,나를,오픈플래닛
-chat.narle.io,14.63.159.116,나를,오픈플래닛
-14.63.159.129,14.63.159.129,나를,오픈플래닛
-media2.narle.io,175.196.95.124,나를,오픈플래닛
-175.196.95.128,175.196.95.128,나를,오픈플래닛
-108.177.125.188,108.177.125.188,시즌,TV하이라이트
-log.megatvdnp.co.kr,175.207.88.160,시즌,TV하이라이트
-api.megatvdnp.co.kr,175.207.88.163,시즌,TV하이라이트
-omas.megatvdnp.co.kr,175.207.88.32,시즌,TV하이라이트
-img.megatvdnp.co.kr,222.122.121.30,시즌,TV하이라이트
-contents.megatvdnp.co.kr,222.122.121.40,시즌,TV하이라이트
-otm-clip.macc.skcdn.com,222.239.21.163,시즌,TV하이라이트
-otm-clip.macc.skcdn.com,222.239.21.164,시즌,TV하이라이트
-golem.canonical.com,91.189.89.199,시즌,TV하이라이트
-otm-cjad.lgucdn.com,117.52.180.194,시즌,동영상
-otm-cjmott.lgucdn.com,117.52.8.10,시즌,동영상
-otm-cjmott.lgucdn.com,117.52.8.11,시즌,동영상
-otm-cjmott.lgucdn.com,117.52.8.2,시즌,동영상
-otm-cjmott.lgucdn.com,117.52.8.3,시즌,동영상
-121.156.46.118,121.156.46.118,시즌,동영상
-121.156.46.62,121.156.46.62,시즌,동영상
-121.156.46.76,121.156.46.76,시즌,동영상
-121.156.46.77,121.156.46.77,시즌,동영상
-121.156.46.78,121.156.46.78,시즌,동영상
-adverweb.cjenm.com,14.34.8.217,시즌,동영상
-beacons.gvt2.com,172.217.31.131,시즌,동영상
-log.megatvdnp.co.kr,175.207.88.160,시즌,동영상
-reco.megatvdnp.co.kr,175.207.88.161,시즌,동영상
-api.megatvdnp.co.kr,175.207.88.163,시즌,동영상
-omas.megatvdnp.co.kr,175.207.88.32,시즌,동영상
-omws.megatvdnp.co.kr,175.207.88.34,시즌,동영상
-218.145.38.5,218.145.38.5,시즌,동영상
-218.145.38.52,218.145.38.52,시즌,동영상
-amsweb.megatvdnp.co.kr,222.122.121.128,시즌,동영상
-img.megatvdnp.co.kr,222.122.121.30,시즌,동영상
-contents.megatvdnp.co.kr,222.122.121.40,시즌,동영상
-menu.megatvdnp.co.kr,222.122.121.70,시즌,동영상
-drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,동영상
-108.177.125.188,108.177.125.188,시즌,라이브
-kocn-cjlivedrm.lgucdn.com,117.52.180.195,시즌,라이브
-ogn-cjenmlive0.lgucdn.com,117.52.180.227,시즌,라이브
-zhtv-cjenmlive0.lgucdn.com,117.52.180.231,시즌,라이브
-xtvn-cjenmlive0.lgucdn.com,117.52.241.21,시즌,라이브
-diatv-cjenmlive0.lgucdn.com,117.52.8.205,시즌,라이브
-kocn-cjlivedrm.lgucdn.com,117.52.8.227,시즌,라이브
-121.156.46.75,121.156.46.75,시즌,라이브
-121.156.46.76,121.156.46.76,시즌,라이브
-121.156.46.77,121.156.46.77,시즌,라이브
-121.156.46.78,121.156.46.78,시즌,라이브
-121.156.46.79,121.156.46.79,시즌,라이브
-log.tving.com,14.34.8.208,시즌,라이브
-api.megatvdnp.co.kr,175.207.88.163,시즌,라이브
-218.145.38.18,218.145.38.18,시즌,라이브
-218.145.38.22,218.145.38.22,시즌,라이브
-218.145.38.42,218.145.38.42,시즌,라이브
-218.145.38.45,218.145.38.45,시즌,라이브
-218.145.38.5,218.145.38.5,시즌,라이브
-amsweb.megatvdnp.co.kr,222.122.121.128,시즌,라이브
-contents.megatvdnp.co.kr,222.122.121.40,시즌,라이브
-menu.megatvdnp.co.kr,222.122.121.70,시즌,라이브
-otm.drmkeyserver.com,52.78.139.16,시즌,라이브
-freesam.kt.com,14.32.69.19,시즌,앱시작
-reco.megatvdnp.co.kr,175.207.88.161,시즌,앱시작
-api.megatvdnp.co.kr,175.207.88.163,시즌,앱시작
-omas.megatvdnp.co.kr,175.207.88.32,시즌,앱시작
-omws.megatvdnp.co.kr,175.207.88.34,시즌,앱시작
-amsweb.megatvdnp.co.kr,222.122.121.128,시즌,앱시작
-img.megatvdnp.co.kr,222.122.121.30,시즌,앱시작
-contents.megatvdnp.co.kr,222.122.121.40,시즌,앱시작
-menu.megatvdnp.co.kr,222.122.121.70,시즌,앱시작
-drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,앱시작
-kt.gamen.com,121.156.126.52,클립,앱시작
-kt.img.gamen.com.wtxcdn.com,14.0.113.205,클립,앱시작
-freesam.kt.com,14.32.69.19,클립,앱시작
-mony.clipwallet.co.kr,14.32.69.60,클립,앱시작
-logs.clipwallet.co.kr,14.32.69.7,클립,앱시작
-rawgit.rawgh.netdna-cdn.com,151.139.237.11,클립,앱시작
-app.clipwallet.co.kr,175.196.94.7,클립,앱시작
-track-nswitch.nasmob.com,183.110.238.171,클립,앱시작
-screen.buzzvil.com,52.193.151.120,클립,앱시작
-directauto.samsungcard.com,112.106.2.162,클립,카테크
-freesam.kt.com,14.32.69.19,클립,카테크
-mony.clipwallet.co.kr,14.32.69.60,클립,카테크
-logs.clipwallet.co.kr,14.32.69.7,클립,카테크
-m.kt.com,14.63.149.226,클립,카테크
-17.248.161.165,17.248.161.165,클립,카테크
-login.kt.com,175.196.94.13,클립,카테크
-app.clipwallet.co.kr,175.196.94.7,클립,카테크
-210.219.173.121,210.219.173.121,클립,카테크
-freesam.kt.com,14.32.69.19,클립,멤버십 카드
-logs.clipwallet.co.kr,14.32.69.7,클립,멤버십 카드
-app.clipwallet.co.kr,175.196.94.7,클립,멤버십 카드
-119.207.64.26,119.207.64.26,클립,포인트 전환
-14.0.115.222,14.0.115.222,클립,포인트 전환
-freesam.kt.com,14.32.69.19,클립,포인트 전환
-mony.clipwallet.co.kr,14.32.69.60,클립,포인트 전환
-logs.clipwallet.co.kr,14.32.69.7,클립,포인트 전환
-175.196.94.11,175.196.94.11,클립,포인트 전환
-app.clipwallet.co.kr,175.196.94.7,클립,포인트 전환
-seimg.pincrux.com.wtxcdn.com,14.0.112.116,클립,포인트 충전
-freesam.kt.com,14.32.69.19,클립,설문조사
-app.clipwallet.co.kr,175.196.94.7,클립,설문조사
-210.219.173.121,210.219.173.121,클립,설문조사
-kt.img.gamen.com.wtxcdn.com,14.0.113.205,클립,홈엔카드
-img.clipwallet.co.kr,14.32.69.6,클립,홈엔카드
-logs.clipwallet.co.kr,14.32.69.7,클립,홈엔카드
-leaflet.clipwallet.co.kr,14.32.69.8,클립,홈엔카드
-rawgit.rawgh.netdna-cdn.com,151.139.237.11,클립,홈엔카드
-app.clipwallet.co.kr,175.196.94.7,클립,홈엔카드
-screen.buzzvil.com,52.199.104.101,클립,홈엔카드
-ad.buzzvil.com,54.65.243.255,클립,홈엔카드
-ocsp.usertrust.com,151.139.128.14,리얼360,통화
-17.42.254.14,17.42.254.14,리얼360,통화
-17.57.145.9,17.57.145.9,리얼360,통화
-relay01.real360.kt.com,175.207.124.90,리얼360,통화
-175.207.124.91,175.207.124.91,리얼360,통화
-signal01.real360.kt.com,211.252.120.29,리얼360,통화
-access.real360.kt.com,211.252.120.48,리얼360,통화
-211.251.10.48,211.251.10.48,리얼360,더보기
-access.real360.kt.com,211.252.120.48,리얼360,앱시작
-14.32.69.67,14.32.69.67,원내비,지도
-tile.navi.kt.com,14.32.70.9,원내비,지도
-freesam.kt.com,14.32.69.19,원내비,앱실행
-auth.navi.kt.com,14.32.69.61,원내비,앱실행
-giswalk.navi.kt.com,14.32.69.34,원내비,지하철
-14.32.69.67,14.32.69.67,원내비,지하철
-14.32.70.7,14.32.70.7,원내비,지하철
-125.159.60.119,125.159.60.119,원내비,마이크 실행
-125.159.60.120,125.159.60.120,원내비,마이크 실행
-220.75.131.122,220.75.131.122,원내비,마이크 실행
-220.75.131.160,220.75.131.160,원내비,마이크 실행
-220.75.131.180,220.75.131.180,원내비,마이크 실행
-125.159.60.119,125.159.60.119,원내비,마이크 길찾기
-14.32.69.67,14.32.69.67,원내비,마이크 길찾기
-220.75.131.160,220.75.131.160,원내비,마이크 길찾기
-220.75.131.180,220.75.131.180,원내비,마이크 길찾기
-125.159.60.119,125.159.60.119,원내비,마이크 버스찾기
-125.159.60.120,125.159.60.120,원내비,마이크 버스찾기
-14.32.69.67,14.32.69.67,원내비,마이크 버스찾기
-220.75.131.122,220.75.131.122,원내비,마이크 버스찾기
-220.75.131.160,220.75.131.160,원내비,마이크 버스찾기
-220.75.131.180,220.75.131.180,원내비,마이크 버스찾기
-giswalk.navi.kt.com,14.32.69.34,원내비,길찾기-버스
-14.32.69.67,14.32.69.67,원내비,길찾기-버스
-tile.navi.kt.com,14.32.70.9,원내비,길찾기-버스
-giswalk.navi.kt.com,14.32.69.34,원내비,길찾기-자동차
-14.32.69.67,14.32.69.67,원내비,길찾기-자동차
-14.32.69.67,14.32.69.67,원내비,교통정보
-tile.navi.kt.com,14.32.70.9,원내비,교통정보
-giswalk.navi.kt.com,14.32.69.34,원내비,버스검색
-14.32.69.67,14.32.69.67,원내비,버스검색
-14.32.70.7,14.32.70.7,원내비,버스검색
-tile.navi.kt.com,14.32.70.9,원내비,버스검색
-14.32.69.67,14.32.69.67,원내비,주변검색
-tile.navi.kt.com,14.32.70.9,원내비,주변검색
-14.32.69.67,14.32.69.67,원내비,타임머신
-tile.navi.kt.com,14.32.70.9,원내비,타임머신
-113.29.190.176,113.29.190.176,기가지니,앱시작
-125.159.60.95,125.159.60.95,기가지니,앱시작
-freesam.kt.com,14.32.69.19,기가지니,앱시작
-gsvr.ktipmedia.co.kr,220.75.131.30,기가지니,앱시작
-220.75.131.50,220.75.131.50,기가지니,앱시작
-freesam.kt.com,14.32.69.19,기가지니,기가지니 연결
-220.75.131.50,220.75.131.50,기가지니,기가지니 연결
-img.megatvdnp.co.kr,222.122.121.30,키즈랜드,메뉴 리스트
-contents.megatvdnp.co.kr,222.122.121.40,키즈랜드,메뉴 리스트
-menu.megatvdnp.co.kr,222.122.121.70,키즈랜드,메뉴 리스트
-service.game-mode.net,54.178.228.160,키즈랜드,메뉴 리스트
-alphyn.canonical.com,91.189.91.157,키즈랜드,메뉴 리스트
-121.156.46.100,121.156.46.100,키즈랜드,비디오
-121.156.46.103,121.156.46.103,키즈랜드,비디오
-121.156.46.105,121.156.46.105,키즈랜드,비디오
-121.156.46.106,121.156.46.106,키즈랜드,비디오
-121.156.46.112,121.156.46.112,키즈랜드,비디오
-121.156.46.124,121.156.46.124,키즈랜드,비디오
-121.156.46.71,121.156.46.71,키즈랜드,비디오
-121.156.46.72,121.156.46.72,키즈랜드,비디오
-121.156.46.75,121.156.46.75,키즈랜드,비디오
-121.156.46.76,121.156.46.76,키즈랜드,비디오
-121.156.46.78,121.156.46.78,키즈랜드,비디오
-121.156.46.79,121.156.46.79,키즈랜드,비디오
-121.156.46.98,121.156.46.98,키즈랜드,비디오
-218.145.38.48,218.145.38.48,키즈랜드,비디오
-218.145.38.5,218.145.38.5,키즈랜드,비디오
-drmipsusb.megatvdnp.co.kr,222.122.121.88,키즈랜드,비디오
-222.122.207.175,222.122.207.175,키즈랜드,비디오
-freesam.kt.com,14.32.69.19,키즈랜드,앱시작
-omas.megatvdnp.co.kr,175.207.88.32,키즈랜드,앱시작
-amsweb.megatvdnp.co.kr,222.122.121.128,키즈랜드,앱시작
-img.megatvdnp.co.kr,222.122.121.30,키즈랜드,앱시작
-contents.megatvdnp.co.kr,222.122.121.40,키즈랜드,앱시작
-menu.megatvdnp.co.kr,222.122.121.70,키즈랜드,앱시작
-,,,
+﻿Domain,IP,App,Service,공통여부
+14.63.143.193,14.63.143.193,KT Super VR,VR 리스트,FALSE
+freesam.kt.com,14.32.69.19,KT Super VR,앱시작,TRUE
+14.63.143.193,14.63.143.193,KT Super VR,앱시작,FALSE
+imas.omega-bo.co.kr,175.207.88.64,KT Super VR,앱시작,FALSE
+imws.omega-bo.co.kr,175.207.88.65,KT Super VR,앱시작,FALSE
+Domain,IP,App,Service,공통여부
+175.207.124.74,175.207.124.74,e스포츠라이브,LIVE방송,FALSE
+175.207.124.79,175.207.124.79,e스포츠라이브,LIVE방송,FALSE
+fgelw.esports.kt.com,211.252.120.38,e스포츠라이브,LIVE방송,FALSE
+freesam.kt.com,14.32.69.19,e스포츠라이브,VOD,TRUE
+175.207.124.71,175.207.124.71,e스포츠라이브,VOD,FALSE
+175.207.124.74,175.207.124.74,e스포츠라이브,VOD,FALSE
+175.207.124.75,175.207.124.75,e스포츠라이브,VOD,FALSE
+175.207.124.78,175.207.124.78,e스포츠라이브,VOD,FALSE
+175.207.124.79,175.207.124.79,e스포츠라이브,VOD,FALSE
+fgelw.esports.kt.com,211.252.120.38,e스포츠라이브,VOD,FALSE
+59.18.30.144,59.18.30.144,e스포츠라이브,VOD,FALSE
+freesam.kt.com,14.32.69.19,e스포츠라이브,앱시작,TRUE
+175.207.124.71,175.207.124.71,e스포츠라이브,앱시작,FALSE
+fgelw.esports.kt.com,211.252.120.38,e스포츠라이브,앱시작,FALSE
+Domain,IP,App,Service,공통여부
+14.32.70.2,14.32.70.2,나를,통화,FALSE
+narle.io,14.63.159.112,나를,통화,FALSE
+file.narle.io,14.63.159.113,나를,통화,FALSE
+chat.narle.io,14.63.159.116,나를,통화,FALSE
+14.63.159.129,14.63.159.129,나를,통화,FALSE
+media1.narle.io,175.196.95.123,나를,통화,FALSE
+175.196.95.125,175.196.95.125,나를,통화,FALSE
+211.252.121.68,211.252.121.68,나를,통화,FALSE
+freesam.kt.com,14.32.69.19,나를,앱시작,TRUE
+narle.io,14.63.159.112,나를,앱시작,FALSE
+14.63.159.129,14.63.159.129,나를,앱시작,FALSE
+api2.userhabit.io,52.193.78.93,나를,앱시작,FALSE
+14.32.70.2,14.32.70.2,나를,오픈플래닛,FALSE
+narle.io,14.63.159.112,나를,오픈플래닛,FALSE
+file.narle.io,14.63.159.113,나를,오픈플래닛,FALSE
+chat.narle.io,14.63.159.116,나를,오픈플래닛,FALSE
+14.63.159.129,14.63.159.129,나를,오픈플래닛,FALSE
+media2.narle.io,175.196.95.124,나를,오픈플래닛,FALSE
+175.196.95.128,175.196.95.128,나를,오픈플래닛,FALSE
+Domain,IP,App,Service,공통여부
+108.177.125.188,108.177.125.188,시즌,TV하이라이트,FALSE
+log.megatvdnp.co.kr,175.207.88.160,시즌,TV하이라이트,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,TV하이라이트,FALSE
+omas.megatvdnp.co.kr,175.207.88.32,시즌,TV하이라이트,TRUE
+img.megatvdnp.co.kr,222.122.121.30,시즌,TV하이라이트,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,TV하이라이트,TRUE
+otm-clip.macc.skcdn.com,222.239.21.163,시즌,TV하이라이트,FALSE
+otm-clip.macc.skcdn.com,222.239.21.164,시즌,TV하이라이트,FALSE
+10.42.0.216,10.42.0.216,시즌,영화,FALSE
+apis.genie.co.kr,119.205.218.101,시즌,영화,FALSE
+121.156.46.100,121.156.46.100,시즌,영화,TRUE
+121.156.46.123,121.156.46.123,시즌,영화,FALSE
+121.156.46.52,121.156.46.52,시즌,영화,FALSE
+121.156.46.57,121.156.46.57,시즌,영화,FALSE
+121.156.46.64,121.156.46.64,시즌,영화,FALSE
+121.156.46.82,121.156.46.82,시즌,영화,FALSE
+reco.megatvdnp.co.kr,175.207.88.161,시즌,영화,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,영화,FALSE
+geniecache.nb-01.ktics.co.kr,183.110.52.225,시즌,영화,TRUE
+MyoungehsiPhone,192.168.1.61,시즌,영화,FALSE
+img.megatvdnp.co.kr,222.122.121.30,시즌,영화,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,영화,TRUE
+drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,영화,TRUE
+otm-cjad.lgucdn.com,117.52.180.194,시즌,동영상,FALSE
+otm-cjmott.lgucdn.com,117.52.8.10,시즌,동영상,FALSE
+otm-cjmott.lgucdn.com,117.52.8.11,시즌,동영상,FALSE
+otm-cjmott.lgucdn.com,117.52.8.2,시즌,동영상,FALSE
+otm-cjmott.lgucdn.com,117.52.8.3,시즌,동영상,FALSE
+121.156.46.118,121.156.46.118,시즌,동영상,FALSE
+121.156.46.62,121.156.46.62,시즌,동영상,FALSE
+121.156.46.76,121.156.46.76,시즌,동영상,TRUE
+121.156.46.77,121.156.46.77,시즌,동영상,FALSE
+121.156.46.78,121.156.46.78,시즌,동영상,TRUE
+adverweb.cjenm.com,14.34.8.217,시즌,동영상,FALSE
+log.megatvdnp.co.kr,175.207.88.160,시즌,동영상,FALSE
+reco.megatvdnp.co.kr,175.207.88.161,시즌,동영상,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,동영상,FALSE
+omas.megatvdnp.co.kr,175.207.88.32,시즌,동영상,TRUE
+omws.megatvdnp.co.kr,175.207.88.34,시즌,동영상,FALSE
+218.145.38.5,218.145.38.5,시즌,동영상,TRUE
+218.145.38.52,218.145.38.52,시즌,동영상,FALSE
+amsweb.megatvdnp.co.kr,222.122.121.128,시즌,동영상,TRUE
+img.megatvdnp.co.kr,222.122.121.30,시즌,동영상,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,동영상,TRUE
+menu.megatvdnp.co.kr,222.122.121.70,시즌,동영상,TRUE
+drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,동영상,TRUE
+10.42.0.216,10.42.0.216,시즌,드라마,FALSE
+apis.genie.co.kr,119.205.218.101,시즌,드라마,FALSE
+121.156.46.101,121.156.46.101,시즌,드라마,FALSE
+121.156.46.104,121.156.46.104,시즌,드라마,FALSE
+121.156.46.126,121.156.46.126,시즌,드라마,FALSE
+121.156.46.51,121.156.46.51,시즌,드라마,FALSE
+121.156.46.54,121.156.46.54,시즌,드라마,FALSE
+121.156.46.55,121.156.46.55,시즌,드라마,FALSE
+121.156.46.58,121.156.46.58,시즌,드라마,FALSE
+121.156.46.60,121.156.46.60,시즌,드라마,FALSE
+121.156.46.87,121.156.46.87,시즌,드라마,FALSE
+kt-tracker-env.ap-northeast-2.elasticbeanstalk.com,13.124.160.227,시즌,드라마,FALSE
+reco.megatvdnp.co.kr,175.207.88.161,시즌,드라마,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,드라마,FALSE
+geniecache.nb-01.ktics.co.kr,183.110.52.225,시즌,드라마,TRUE
+MyoungehsiPhone,192.168.1.61,시즌,드라마,FALSE
+amsweb.megatvdnp.co.kr,222.122.121.128,시즌,드라마,TRUE
+img.megatvdnp.co.kr,222.122.121.30,시즌,드라마,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,드라마,TRUE
+drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,드라마,TRUE
+api.snapcraft.io,91.189.92.41,시즌,드라마,FALSE
+1.102.112.16,1.102.112.16,시즌,라이브,FALSE
+1.102.114.28,1.102.114.28,시즌,라이브,FALSE
+1.102.114.30,1.102.114.30,시즌,라이브,FALSE
+10.42.0.216,10.42.0.216,시즌,라이브,FALSE
+pool.ntp.org,106.247.248.106,시즌,라이브,FALSE
+108.177.125.188,108.177.125.188,시즌,라이브,FALSE
+kocn-cjlivedrm.lgucdn.com,117.52.180.195,시즌,라이브,FALSE
+kocn-cjlivedrm.lgucdn.com,117.52.180.226,시즌,라이브,FALSE
+ogn-cjenmlive0.lgucdn.com,117.52.180.227,시즌,라이브,FALSE
+zhtv-cjenmlive0.lgucdn.com,117.52.180.231,시즌,라이브,FALSE
+xtvn-cjenmlive0.lgucdn.com,117.52.241.21,시즌,라이브,FALSE
+diatv-cjenmlive0.lgucdn.com,117.52.8.205,시즌,라이브,FALSE
+kocn-cjlivedrm.lgucdn.com,117.52.8.227,시즌,라이브,FALSE
+tvn-cjenmlive0.lgucdn.com,117.52.8.4,시즌,라이브,FALSE
+onstyle-cjenmlive0.lgucdn.com,117.52.8.5,시즌,라이브,FALSE
+olive-cjenmlive0.lgucdn.com,117.52.8.8,시즌,라이브,FALSE
+121.156.46.75,121.156.46.75,시즌,라이브,TRUE
+121.156.46.76,121.156.46.76,시즌,라이브,TRUE
+121.156.46.77,121.156.46.77,시즌,라이브,FALSE
+121.156.46.78,121.156.46.78,시즌,라이브,TRUE
+121.156.46.79,121.156.46.79,시즌,라이브,TRUE
+log.tving.com,14.34.8.208,시즌,라이브,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,라이브,FALSE
+218.145.38.18,218.145.38.18,시즌,라이브,FALSE
+218.145.38.22,218.145.38.22,시즌,라이브,FALSE
+218.145.38.42,218.145.38.42,시즌,라이브,FALSE
+218.145.38.43,218.145.38.43,시즌,라이브,FALSE
+218.145.38.45,218.145.38.45,시즌,라이브,FALSE
+218.145.38.5,218.145.38.5,시즌,라이브,TRUE
+218.145.38.50,218.145.38.50,시즌,라이브,FALSE
+218.145.38.51,218.145.38.51,시즌,라이브,FALSE
+218.145.38.52,218.145.38.52,시즌,라이브,FALSE
+amsweb.megatvdnp.co.kr,222.122.121.128,시즌,라이브,TRUE
+img.megatvdnp.co.kr,222.122.121.30,시즌,라이브,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,라이브,TRUE
+menu.megatvdnp.co.kr,222.122.121.70,시즌,라이브,TRUE
+otm.drmkeyserver.com,52.78.139.16,시즌,라이브,FALSE
+freesam.kt.com,14.32.69.19,시즌,앱시작,TRUE
+reco.megatvdnp.co.kr,175.207.88.161,시즌,앱시작,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,앱시작,FALSE
+omas.megatvdnp.co.kr,175.207.88.32,시즌,앱시작,TRUE
+omws.megatvdnp.co.kr,175.207.88.34,시즌,앱시작,FALSE
+send.mx.cdnetworks.com,211.233.40.78,시즌,앱시작,FALSE
+amsweb.megatvdnp.co.kr,222.122.121.128,시즌,앱시작,TRUE
+img.megatvdnp.co.kr,222.122.121.30,시즌,앱시작,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,앱시작,TRUE
+menu.megatvdnp.co.kr,222.122.121.70,시즌,앱시작,TRUE
+drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,앱시작,TRUE
+121.156.46.124,121.156.46.124,시즌,해외드라마,TRUE
+kt-tracker-env.ap-northeast-2.elasticbeanstalk.com,13.124.160.227,시즌,해외드라마,FALSE
+reco.megatvdnp.co.kr,175.207.88.161,시즌,해외드라마,FALSE
+api.megatvdnp.co.kr,175.207.88.163,시즌,해외드라마,FALSE
+img.megatvdnp.co.kr,222.122.121.30,시즌,해외드라마,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,시즌,해외드라마,TRUE
+drmipsusb.megatvdnp.co.kr,222.122.121.88,시즌,해외드라마,TRUE
+Domain,IP,App,Service,공통여부
+kt.img.gamen.com.wtxcdn.com,119.206.200.183,클립,앱시작,FALSE
+kt.gamen.com,121.156.126.32,클립,앱시작,FALSE
+kt.gamen.com,121.156.126.52,클립,앱시작,FALSE
+kt.img.gamen.com.wtxcdn.com,14.0.113.205,클립,앱시작,FALSE
+freesam.kt.com,14.32.69.19,클립,앱시작,TRUE
+mony.clipwallet.co.kr,14.32.69.60,클립,앱시작,FALSE
+logs.clipwallet.co.kr,14.32.69.7,클립,앱시작,FALSE
+rawgit.rawgh.netdna-cdn.com,151.139.237.11,클립,앱시작,FALSE
+app.clipwallet.co.kr,175.196.94.7,클립,앱시작,FALSE
+track-nswitch.nasmob.com,183.110.238.171,클립,앱시작,FALSE
+screen.buzzvil.com,52.193.151.120,클립,앱시작,FALSE
+directauto.samsungcard.com,112.106.2.162,클립,카테크,FALSE
+freesam.kt.com,14.32.69.19,클립,카테크,TRUE
+mony.clipwallet.co.kr,14.32.69.60,클립,카테크,FALSE
+logs.clipwallet.co.kr,14.32.69.7,클립,카테크,FALSE
+m.kt.com,14.63.149.226,클립,카테크,FALSE
+17.248.161.165,17.248.161.165,클립,카테크,FALSE
+login.kt.com,175.196.94.13,클립,카테크,FALSE
+app.clipwallet.co.kr,175.196.94.7,클립,카테크,FALSE
+210.219.173.121,210.219.173.121,클립,카테크,FALSE
+119.206.200.182,119.206.200.182,클립,포인트,FALSE
+175.196.94.11,175.196.94.11,클립,포인트,FALSE
+app.clipwallet.co.kr,175.196.94.7,클립,포인트,FALSE
+116.67.103.180,116.67.103.180,클립,멤버십 카드,FALSE
+116.67.103.183,116.67.103.183,클립,멤버십 카드,FALSE
+119.206.200.186,119.206.200.186,클립,멤버십 카드,FALSE
+kt.gamen.com,121.156.126.32,클립,멤버십 카드,FALSE
+freesam.kt.com,14.32.69.19,클립,멤버십 카드,TRUE
+img.clipwallet.co.kr,14.32.69.6,클립,멤버십 카드,FALSE
+logs.clipwallet.co.kr,14.32.69.7,클립,멤버십 카드,FALSE
+rawgit.rawgh.netdna-cdn.com,151.139.237.11,클립,멤버십 카드,FALSE
+app.clipwallet.co.kr,175.196.94.7,클립,멤버십 카드,FALSE
+192.48.236.12,192.48.236.12,클립,멤버십 카드,FALSE
+119.207.64.26,119.207.64.26,클립,포인트 전환,FALSE
+14.0.115.222,14.0.115.222,클립,포인트 전환,FALSE
+freesam.kt.com,14.32.69.19,클립,포인트 전환,TRUE
+mony.clipwallet.co.kr,14.32.69.60,클립,포인트 전환,FALSE
+logs.clipwallet.co.kr,14.32.69.7,클립,포인트 전환,FALSE
+175.196.94.11,175.196.94.11,클립,포인트 전환,FALSE
+app.clipwallet.co.kr,175.196.94.7,클립,포인트 전환,FALSE
+seimg.pincrux.com.wtxcdn.com,14.0.112.116,클립,포인트 충전,FALSE
+freesam.kt.com,14.32.69.19,클립,설문조사,TRUE
+app.clipwallet.co.kr,175.196.94.7,클립,설문조사,FALSE
+210.219.173.121,210.219.173.121,클립,설문조사,FALSE
+kt.img.gamen.com.wtxcdn.com,14.0.113.205,클립,홈엔카드,FALSE
+img.clipwallet.co.kr,14.32.69.6,클립,홈엔카드,FALSE
+logs.clipwallet.co.kr,14.32.69.7,클립,홈엔카드,FALSE
+leaflet.clipwallet.co.kr,14.32.69.8,클립,홈엔카드,FALSE
+rawgit.rawgh.netdna-cdn.com,151.139.237.11,클립,홈엔카드,FALSE
+app.clipwallet.co.kr,175.196.94.7,클립,홈엔카드,FALSE
+screen.buzzvil.com,52.199.104.101,클립,홈엔카드,FALSE
+ad.buzzvil.com,54.65.243.255,클립,홈엔카드,FALSE
+Domain,IP,App,Service,공통여부
+idm.skplanet.com,1.234.81.14,지니 뮤직,매거진,FALSE
+app.genie.co.kr,112.175.156.40,지니 뮤직,매거진,FALSE
+119.205.218.140,119.205.218.140,지니 뮤직,매거진,FALSE
+extcm.c.appier.net,139.162.61.54,지니 뮤직,매거진,FALSE
+scontent.xx.fbcdn.net,157.240.215.14,지니 뮤직,매거진,FALSE
+i.ytimg.com,172.217.175.86,지니 뮤직,매거진,FALSE
+fs.bizspring.net,180.182.57.95,지니 뮤직,매거진,FALSE
+183.110.52.224,183.110.52.224,지니 뮤직,매거진,FALSE
+183.110.52.98,183.110.52.98,지니 뮤직,매거진,FALSE
+developers.gl.kakao.com,203.133.166.35,지니 뮤직,매거진,FALSE
+slb-851753.ncloudslb.com,210.89.187.55,지니 뮤직,매거진,FALSE
+slb-705258.ncloudslb.com,220.230.126.45,지니 뮤직,매거진,FALSE
+slb-584754.ncloudslb.com,220.230.127.199,지니 뮤직,매거진,FALSE
+adlc-exchange.toast.com,43.227.116.78,지니 뮤직,매거진,FALSE
+app.genie.co.kr,112.175.156.40,지니 뮤직,앱시작,FALSE
+weather.genie.co.kr,119.205.218.215,지니 뮤직,앱시작,FALSE
+freesam.kt.com,14.32.69.19,지니 뮤직,앱시작,TRUE
+geniecache.nb-01.ktics.co.kr,183.110.52.97,지니 뮤직,앱시작,TRUE
+112.175.156.18,112.175.156.18,지니 뮤직,음악실행,FALSE
+dn.genie.co.kr,112.175.156.25,지니 뮤직,음악실행,FALSE
+app.genie.co.kr,112.175.156.40,지니 뮤직,음악실행,FALSE
+stm.genie.co.kr,119.205.218.138,지니 뮤직,음악실행,FALSE
+geniecache.nb-01.ktics.co.kr,183.110.52.97,지니 뮤직,음악실행,TRUE
+geniestreaming.nb-01.ktics.co.kr,222.122.69.134,지니 뮤직,음악실행,FALSE
+222.122.69.54,222.122.69.54,지니 뮤직,음악실행,FALSE
+app.genie.co.kr,112.175.156.40,지니 뮤직,지니차트,FALSE
+geniecache.nb-01.ktics.co.kr,183.110.52.97,지니 뮤직,지니차트,TRUE
+app.genie.co.kr,112.175.156.40,지니 뮤직,지니티비,FALSE
+weather.genie.co.kr,119.205.218.215,지니 뮤직,지니티비,FALSE
+geniecache.nb-01.ktics.co.kr,183.110.52.97,지니 뮤직,지니티비,TRUE
+222.122.181.223,222.122.181.223,지니 뮤직,지니티비,FALSE
+Domain,IP,App,Service,공통여부
+ocsp.usertrust.com,151.139.128.14,리얼360,통화,FALSE
+17.42.254.14,17.42.254.14,리얼360,통화,FALSE
+17.57.145.9,17.57.145.9,리얼360,통화,FALSE
+relay01.real360.kt.com,175.207.124.90,리얼360,통화,FALSE
+175.207.124.91,175.207.124.91,리얼360,통화,FALSE
+signal01.real360.kt.com,211.252.120.29,리얼360,통화,FALSE
+access.real360.kt.com,211.252.120.48,리얼360,통화,FALSE
+211.251.10.48,211.251.10.48,리얼360,더보기,FALSE
+access.real360.kt.com,211.252.120.48,리얼360,앱시작,FALSE
+Domain,IP,App,Service,공통여부
+session.navi.kt.com,14.32.69.67,원내비,지도,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,지도,FALSE
+freesam.kt.com,14.32.69.19,원내비,앱시작,TRUE
+auth.navi.kt.com,14.32.69.61,원내비,앱시작,FALSE
+static.navi.kt.com,14.32.69.62,원내비,앱시작,FALSE
+session.navi.kt.com,14.32.69.67,원내비,앱시작,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,앱시작,FALSE
+giswalk.navi.kt.com,14.32.69.34,원내비,지하철,FALSE
+session.navi.kt.com,14.32.69.67,원내비,지하철,FALSE
+14.32.70.7,14.32.70.7,원내비,지하철,FALSE
+125.159.60.119,125.159.60.119,원내비,마이크 실행,FALSE
+125.159.60.120,125.159.60.120,원내비,마이크 실행,FALSE
+220.75.131.122,220.75.131.122,원내비,마이크 실행,FALSE
+220.75.131.160,220.75.131.160,원내비,마이크 실행,FALSE
+220.75.131.180,220.75.131.180,원내비,마이크 실행,FALSE
+125.159.60.119,125.159.60.119,원내비,마이크 길찾기,FALSE
+session.navi.kt.com,14.32.69.67,원내비,마이크 길찾기,FALSE
+220.75.131.160,220.75.131.160,원내비,마이크 길찾기,FALSE
+220.75.131.180,220.75.131.180,원내비,마이크 길찾기,FALSE
+125.159.60.119,125.159.60.119,원내비,마이크 버스찾기,FALSE
+125.159.60.120,125.159.60.120,원내비,마이크 버스찾기,FALSE
+session.navi.kt.com,14.32.69.67,원내비,마이크 버스찾기,FALSE
+220.75.131.122,220.75.131.122,원내비,마이크 버스찾기,FALSE
+220.75.131.160,220.75.131.160,원내비,마이크 버스찾기,FALSE
+220.75.131.180,220.75.131.180,원내비,마이크 버스찾기,FALSE
+giswalk.navi.kt.com,14.32.69.34,원내비,길찾기-버스,FALSE
+session.navi.kt.com,14.32.69.67,원내비,길찾기-버스,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,길찾기-버스,FALSE
+giswalk.navi.kt.com,14.32.69.34,원내비,길찾기-자동차,FALSE
+session.navi.kt.com,14.32.69.67,원내비,길찾기-자동차,FALSE
+session.navi.kt.com,14.32.69.67,원내비,교통정보,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,교통정보,FALSE
+giswalk.navi.kt.com,14.32.69.34,원내비,버스검색,FALSE
+session.navi.kt.com,14.32.69.67,원내비,버스검색,FALSE
+14.32.70.7,14.32.70.7,원내비,버스검색,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,버스검색,FALSE
+session.navi.kt.com,14.32.69.67,원내비,주변검색,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,주변검색,FALSE
+session.navi.kt.com,14.32.69.67,원내비,타임머신,FALSE
+tile.navi.kt.com,14.32.70.9,원내비,타임머신,FALSE
+Domain,IP,App,Service,공통여부
+113.29.190.176,113.29.190.176,기가지니,앱시작,FALSE
+125.159.60.95,125.159.60.95,기가지니,앱시작,FALSE
+freesam.kt.com,14.32.69.19,기가지니,앱시작,TRUE
+gsvr.ktipmedia.co.kr,220.75.131.30,기가지니,앱시작,FALSE
+220.75.131.50,220.75.131.50,기가지니,앱시작,FALSE
+freesam.kt.com,14.32.69.19,기가지니,기가지니 연결,TRUE
+220.75.131.50,220.75.131.50,기가지니,기가지니 연결,FALSE
+Domain,IP,App,Service,공통여부
+img.megatvdnp.co.kr,222.122.121.30,키즈랜드,메뉴 리스트,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,키즈랜드,메뉴 리스트,TRUE
+menu.megatvdnp.co.kr,222.122.121.70,키즈랜드,메뉴 리스트,TRUE
+121.156.46.100,121.156.46.100,키즈랜드,비디오,TRUE
+121.156.46.103,121.156.46.103,키즈랜드,비디오,FALSE
+121.156.46.105,121.156.46.105,키즈랜드,비디오,FALSE
+121.156.46.106,121.156.46.106,키즈랜드,비디오,FALSE
+121.156.46.112,121.156.46.112,키즈랜드,비디오,FALSE
+121.156.46.124,121.156.46.124,키즈랜드,비디오,TRUE
+121.156.46.71,121.156.46.71,키즈랜드,비디오,FALSE
+121.156.46.72,121.156.46.72,키즈랜드,비디오,FALSE
+121.156.46.75,121.156.46.75,키즈랜드,비디오,TRUE
+121.156.46.76,121.156.46.76,키즈랜드,비디오,TRUE
+121.156.46.78,121.156.46.78,키즈랜드,비디오,TRUE
+121.156.46.79,121.156.46.79,키즈랜드,비디오,TRUE
+121.156.46.98,121.156.46.98,키즈랜드,비디오,FALSE
+218.145.38.48,218.145.38.48,키즈랜드,비디오,FALSE
+218.145.38.5,218.145.38.5,키즈랜드,비디오,TRUE
+drmipsusb.megatvdnp.co.kr,222.122.121.88,키즈랜드,비디오,TRUE
+222.122.207.175,222.122.207.175,키즈랜드,비디오,FALSE
+freesam.kt.com,14.32.69.19,키즈랜드,앱시작,TRUE
+omas.megatvdnp.co.kr,175.207.88.32,키즈랜드,앱시작,TRUE
+amsweb.megatvdnp.co.kr,222.122.121.128,키즈랜드,앱시작,TRUE
+img.megatvdnp.co.kr,222.122.121.30,키즈랜드,앱시작,TRUE
+contents.megatvdnp.co.kr,222.122.121.40,키즈랜드,앱시작,TRUE
+menu.megatvdnp.co.kr,222.122.121.70,키즈랜드,앱시작,TRUE
+,,,,

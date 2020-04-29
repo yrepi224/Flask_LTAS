@@ -1,11 +1,10 @@
 # -*- coding:utf-8 -*-
 import psycopg2
-from openpyxl import Workbook, load_workbook
+from openpyxl import Workbook
 from openpyxl.styles import NamedStyle, Font, Border, Side
 from datetime import datetime
 import glob
 import os
-import sys
 import csv
 bad_host = ['facebook', 'google.co.kr', 'google.com', 'amazonaws', 'ubuntu', 'canonical', 'googlemail', 'akamaitechnologies.com', '1e100.net', 'service.game-mode.net', 'localhost', 'DESKTOP-18JBMRB',
             'cloudfront.net', '1e100.net', 'display.ad.g.daum.net', 'googleusercontent.com', 'doubleclick', 'ec2', 'd1iskralo6mo11.cloudfront.net', 'beacons.gvt2.com', 'samsungiotcloud',
@@ -187,7 +186,7 @@ def upload_sorted_data(raw_data):
                 break
         if no_save is True:
             try:
-                cur.execute(f"""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate", "date")           
+                cur.execute(f"""INSERT INTO public."AllData"("Pkey", "host", "ip", "app", "service", "filename", "duplicate", "date")
                 VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{value[5]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
                 conn.commit()
                 cnt = cnt + 1
@@ -212,7 +211,7 @@ def upload_sorted_data(raw_data):
                     break
             if no_save is True:
                 try:
-                    cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename", "date")           
+                    cur.execute(f"""INSERT INTO public."ShareData"("Pkey", "host", "ip", "app", "service", "filename", "date")
                     VALUES('{key}', '{value[0]}', '{value[1]}', '{value[2]}', '{value[3]}', '{value[4]}', '{datetime.today().strftime("%Y-%m-%d")}')""")
                     conn.commit()
                     cnt = cnt + 1

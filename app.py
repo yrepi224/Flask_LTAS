@@ -119,7 +119,7 @@ def Report_excel(csv):
 @app.route('/upload/emergency/', methods=['POST','GET'])
 def emergency():
     """
-    보고서 파일을 데이터베이스에 한번에 입력한다. 
+    보고서 파일을 데이터베이스에 한번에 입력한다.
     """
     if request.method == 'POST':
         try:
