@@ -63,7 +63,7 @@ coverage.xml
 *.mo
 *.pot
 *.csv
-
+*.xlsx
 # Scrapy stuff:
 .scrapy
 
